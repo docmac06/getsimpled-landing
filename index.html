@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Simpled — Capability intelligence for enterprise learning</title>
+<!-- VERSION: v2-youtube-iframe-2026-05-21 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -223,7 +225,7 @@ nav.scrolled{
   padding:4px 8px;border-radius:2px;background:var(--signal-tint);color:var(--signal-2);
   border:1px solid rgba(216,72,27,.25);
 }
-.tag.hi{background:rgba(142,42,27,.1);color:var(--alert);border-color:rgba(142,42,27,.3)}
+.tag.hi{background:rgba(216,72,27,.07);color:var(--signal-2);border-color:rgba(216,72,27,.22)}
 .dash-foot{
   padding:13px 22px;background:var(--paper-2);
   font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--ink-2);
@@ -234,7 +236,7 @@ nav.scrolled{
   width:22px;height:13px;flex:none;border-radius:2px;
   background:var(--signal-tint);border:1px solid rgba(216,72,27,.4);
 }
-.dash-foot .gap{color:var(--alert);font-weight:500}
+.dash-foot .gap{color:var(--ink-2);font-weight:500}
 
 /* ============== SECTION HEADERS ============== */
 .shead{display:flex;justify-content:space-between;align-items:flex-end;
@@ -762,8 +764,8 @@ footer{background:var(--dark);color:var(--mute);
   <div class="wrap">
     <div class="hero-top">
       <span class="kicker">Enterprise capability intelligence</span>
-      <h1>Know who <span class="hl">actually understands</span> your processes&nbsp;— not just who completed training.</h1>
-      <p class="hero-sub">Generate role-specific training from your existing SOPs, onboarding docs, policies and product guides in minutes. Track knowledge gaps across teams, update content as processes change, and make sure employees can decide correctly when it matters.</p>
+      <h1>Help your teams <span class="hl">actually do the work</span> — not just finish the training.</h1>
+      <p class="hero-sub">Turn your existing SOPs, onboarding docs, policies and product guides into role-specific learning in minutes. See where your people need support, refresh content when processes change, and give every employee what they need to do their job with confidence.</p>
       <div class="hero-actions">
         <a href="https://cal.com/simpled/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a Demo <span class="arr">→</span></a>
         <a href="#how" class="btn btn-ghost">See how it works</a>
@@ -775,14 +777,14 @@ footer{background:var(--dark);color:var(--mute);
     <!-- DASHBOARD -->
     <div class="dash" id="dash">
       <div class="dash-head">
-        <span class="title"><span class="dot"></span>Workforce Capability Monitor</span>
-        <span class="live">Q2 — 3 teams flagged</span>
+        <span class="title"><span class="dot"></span>Team Enablement View</span>
+        <span class="live">Q2 — 3 topics to support</span>
       </div>
       <div class="dash-cols">
-        <div>Employee Group</div>
-        <div>Completion</div>
-        <div>Knowledge Score</div>
-        <div>Risk Areas <span class="col-hint">— flagged below</span></div>
+        <div>Team</div>
+        <div>Training completed</div>
+        <div>Confidence in applying it</div>
+        <div>Topics to strengthen <span class="col-hint">— focus next sprint</span></div>
       </div>
 
       <div class="row">
@@ -792,7 +794,7 @@ footer{background:var(--dark);color:var(--mute);
           <div class="bar done"><i style="--w:92%"></i></div>
         </div>
         <div class="metric">
-          <div class="lbl"><em>understood</em><b>61%</b></div>
+          <div class="lbl"><em>confidence</em><b>61%</b></div>
           <div class="bar know"><i style="--w:61%"></i></div>
         </div>
         <div class="risk">
@@ -808,7 +810,7 @@ footer{background:var(--dark);color:var(--mute);
           <div class="bar done"><i style="--w:88%"></i></div>
         </div>
         <div class="metric">
-          <div class="lbl"><em>understood</em><b>74%</b></div>
+          <div class="lbl"><em>confidence</em><b>74%</b></div>
           <div class="bar know"><i style="--w:74%"></i></div>
         </div>
         <div class="risk">
@@ -823,7 +825,7 @@ footer{background:var(--dark);color:var(--mute);
           <div class="bar done"><i style="--w:96%"></i></div>
         </div>
         <div class="metric">
-          <div class="lbl"><em>understood</em><b>58%</b></div>
+          <div class="lbl"><em>confidence</em><b>58%</b></div>
           <div class="bar know"><i style="--w:58%"></i></div>
         </div>
         <div class="risk">
@@ -833,8 +835,8 @@ footer{background:var(--dark);color:var(--mute);
       </div>
 
       <div class="dash-foot">
-        <span><span class="legend-chip"></span>coloured tags = process areas where understanding is weak enough to be a risk</span>
-        <span class="gap">▼ avg. 27&nbsp;pt understanding gap</span>
+        <span><span class="legend-chip"></span>highlighted topics = where extra coaching or refresher content would help most</span>
+        <span class="gap">↗ recommend a 2-week refresher sprint</span>
       </div>
     </div>
   </div>
@@ -846,39 +848,39 @@ footer{background:var(--dark);color:var(--mute);
     <div class="shead">
       <div>
         <span class="kicker">01 — The problem</span>
-        <h2>Enterprise training is optimized for completion. Work requires capability.</h2>
+        <h2>Most enterprise training teaches people to pass a module. Not to do the work.</h2>
       </div>
-      <p class="shead-side reveal">Five reasons a wall of green checkmarks tells leaders almost nothing about how their workforce actually performs.</p>
+      <p class="shead-side reveal">Five reasons today's L&amp;D stack leaves employees under-supported on the things they actually have to do every day.</p>
     </div>
 
     <div class="prob-grid">
       <div class="prob-card w6 reveal">
         <div class="ptxt">
           <span class="pn">01</span>
-          <h3>Completion does not equal understanding.</h3>
-          <p>Most LMS platforms tell you whether an employee finished a module. They do not tell you whether that employee can apply the process correctly in a real situation — which is the only thing that actually matters on the floor.</p>
+          <h3>Finishing a module isn't the same as feeling ready.</h3>
+          <p>An LMS tells you whether someone clicked through the slides. It doesn't tell you whether they walked away confident enough to apply the process when a real customer, a real edge case, or a real escalation lands in front of them.</p>
         </div>
-        <div class="prob-glyph"><span><b>100%</b>completed<br>—<br><b style="color:var(--mute)">?</b>capable</span></div>
+        <div class="prob-glyph"><span><b>100%</b>completed<br>—<br><b style="color:var(--mute)">?</b>confident</span></div>
       </div>
       <div class="prob-card w3 reveal" style="--d:.05s">
         <span class="pn">02</span>
         <h3>Content goes stale fast.</h3>
-        <p>SOPs, policies, workflows, tools and regulations change constantly. By the time training content is updated, the business has already moved on.</p>
+        <p>SOPs, policies, workflows, tools and regulations change constantly. Employees are left learning from training that no longer matches how the work is actually done.</p>
       </div>
       <div class="prob-card w3 reveal" style="--d:.1s">
         <span class="pn">03</span>
-        <h3>Training is too generic.</h3>
-        <p>Employees receive the same broad content even though their roles, workflows, markets and responsibilities are completely different.</p>
+        <h3>Generic training wastes people's time.</h3>
+        <p>Employees sit through broad, one-size-fits-all content even though their roles, workflows, markets and responsibilities look nothing alike.</p>
       </div>
       <div class="prob-card w3 reveal" style="--d:.05s">
         <span class="pn">04</span>
-        <h3>Compliance proves activity, not behavior.</h3>
-        <p>In regulated industries, training is built to show "we trained them." The real question is whether employees can make the right decision under pressure.</p>
+        <h3>Certificates don't build confidence.</h3>
+        <p>A completion record proves attendance. It doesn't help an employee feel prepared the next time a policy edge-case or regulator question lands in their lap.</p>
       </div>
       <div class="prob-card w3 reveal" style="--d:.1s">
         <span class="pn">05</span>
-        <h3>AI is creating a capability gap.</h3>
-        <p>Enterprises roll out AI tools faster than employees can learn to use them safely, effectively and within real business context.</p>
+        <h3>People are being asked to use AI with no real support.</h3>
+        <p>Enterprises roll out AI tools faster than employees can be supported in using them safely, effectively, and within real business context.</p>
       </div>
     </div>
   </div>
@@ -907,9 +909,9 @@ footer{background:var(--dark);color:var(--mute);
       </div>
       <div class="sol-card reveal" style="--d:.2s">
         <div class="sol-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg></div>
-        <span class="sn">03 / Measure</span>
-        <h3>Track knowledge gaps</h3>
-        <p>See where employees, teams and departments are struggling. Identify weak spots before they become operational errors, compliance failures or customer issues.</p>
+        <span class="sn">03 / Support</span>
+        <h3>See where teams need help</h3>
+        <p>Spot the topics where employees would benefit from extra coaching, a refresher, or clearer documentation — so L&amp;D can step in with support, not paperwork.</p>
       </div>
     </div>
   </div>
@@ -943,9 +945,9 @@ footer{background:var(--dark);color:var(--mute);
         <p>Instead of passive slides, employees are tested on judgment, process application and decision-making — the way work actually happens.</p>
       </div>
       <div class="step reveal">
-        <div class="sx">04<em>Diagnose</em></div>
-        <h3>Leaders see the knowledge gaps</h3>
-        <p>Track understanding by employee, team, location, department, process and risk area — not just a completion percentage.</p>
+        <div class="sx">04<em>Support</em></div>
+        <h3>L&amp;D sees where teams need help</h3>
+        <p>Get an honest view of confidence by team, role, region or topic — so coaching, refresher content and 1:1 support land exactly where they'll have the most impact.</p>
       </div>
       <div class="step reveal">
         <div class="sx">05<em>Loop</em></div>
@@ -966,14 +968,14 @@ footer{background:var(--dark);color:var(--mute);
     <p class="vid-lead">Simpled's <b>proprietary animation engine</b> turns a static SOP, policy or product manual into a clear, narrated whiteboard video your teams will actually watch — generated automatically, in minutes, not production cycles.</p>
 
     <div class="vidframe reveal">
-      <span class="vid-src"><span class="d"></span>generated from: Refund-Policy-SOP_v4.2.pdf</span>
+      <span class="vid-src"><span class="d"></span>generated from: Cybersecurity-Compliance-SOP_v4.2.pdf</span>
       <span class="vid-tag">Whiteboard engine</span>
 
       <iframe
-        src="https://www.youtube-nocookie.com/embed/MyMH85npGI0?rel=0&amp;modestbranding=1&amp;playsinline=1"
-        title="Simpled — whiteboard video demo"
-        loading="lazy"
-        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        src="https://www.youtube.com/embed/MyMH85npGI0"
+        title="SOPs at a Cybersecurity Company"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
         style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:6px"
       ></iframe>
@@ -992,7 +994,7 @@ footer{background:var(--dark);color:var(--mute);
   <div class="wrap">
     <div class="shead col">
       <span class="kicker center">The assessment gap</span>
-      <h2>Recall is easy to fake. Judgment is not.</h2>
+      <h2>Memorizing the answer is easy. Doing the work is harder — and worth practicing.</h2>
     </div>
 
     <div class="assess-grid">
@@ -1004,7 +1006,7 @@ footer{background:var(--dark);color:var(--mute);
           <div class="qopt"><span class="rd"></span>B — Within 60 days</div>
           <div class="qopt"><span class="rd"></span>C — Within 90 days</div>
         </div>
-        <p class="qcap"><b>Tests recall.</b> An employee can pick the right letter and still freeze when a real, messy situation lands on their desk.</p>
+        <p class="qcap"><b>Tests memory.</b> The employee leaves with a checkmark — but no real practice for the moment the actual situation shows up at their desk.</p>
       </div>
 
       <div class="assess-vs reveal" style="--d:.08s">
@@ -1017,7 +1019,7 @@ footer{background:var(--dark);color:var(--mute);
         <span class="qtag"><span class="mk">✓</span>Simpled assessment</span>
         <div class="qq">"Here is a real workplace situation. <em>What would you do next?</em>"</div>
         <div class="scenebox">A customer disputes a charge <b>47 days</b> after purchase, claiming the product was <b>defective on arrival</b>. The standard window is 30 days. Your move?</div>
-        <p class="qcap"><b>Tests judgment.</b> You can't memorize your way through a decision — the employee has to know how the policy actually applies under pressure.</p>
+        <p class="qcap"><b>Tests judgment.</b> You can't memorize your way through a decision — the employee builds and demonstrates the confidence to apply the policy when work actually gets messy.</p>
       </div>
     </div>
   </div>
@@ -1042,7 +1044,7 @@ footer{background:var(--dark);color:var(--mute);
       </div>
       <div class="cmp-row">
         <div class="old"><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><s>Tracks completion</s></div>
-        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Tracks understanding</div>
+        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Builds confidence</div>
       </div>
       <div class="cmp-row">
         <div class="old"><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><s>Generic modules</s></div>
@@ -1058,16 +1060,16 @@ footer{background:var(--dark);color:var(--mute);
       </div>
       <div class="cmp-row">
         <div class="old"><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><s>Compliance certificates</s></div>
-        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Decision-readiness insights</div>
+        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Real practice for real decisions</div>
       </div>
       <div class="cmp-row">
         <div class="old"><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><s>One-size-fits-all learning</s></div>
-        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Personalized gap remediation</div>
+        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Learning that meets people where they are</div>
       </div>
     </div>
 
     <p class="diff-punch reveal">
-      <span class="dp-1">Keep your LMS.</span> <span class="dp-2">Add proof of capability.</span>
+      <span class="dp-1">Keep your LMS.</span> <span class="dp-2">Add real learning on top.</span>
     </p>
 
     <div class="diff-note reveal">
@@ -1093,12 +1095,12 @@ footer{background:var(--dark);color:var(--mute);
       <div class="use reveal" style="--d:.06s">
         <span class="un">02</span>
         <h3>SOP &amp; process training</h3>
-        <p>Ensure employees understand updated workflows before errors show up in operations.</p>
+        <p>Help employees genuinely feel ready when a workflow changes — not learn the new version from a frustrated customer.</p>
       </div>
       <div class="use reveal" style="--d:.12s">
         <span class="un">03</span>
         <h3>Compliance &amp; regulatory</h3>
-        <p>Move beyond certificates — test whether employees can apply rules correctly in real scenarios.</p>
+        <p>Move beyond certificates — give employees realistic practice so policy decisions feel familiar before they ever come up live.</p>
       </div>
       <div class="use reveal">
         <span class="un">04</span>
@@ -1173,8 +1175,8 @@ footer{background:var(--dark);color:var(--mute);
     <div class="comp-grid">
       <div class="comp-copy reveal">
         <span class="kicker">07 — Compliance</span>
-        <h2>Prove more than participation. Prove decision readiness.</h2>
-        <p>For regulated industries, completion records are not enough. Employees need to know how to act when policies, risks, customers, tools and edge cases collide. Simpled assesses whether teams can make the right decision under pressure — not just whether they watched the training.</p>
+        <h2>Give employees the confidence to handle the hard calls.</h2>
+        <p>In regulated industries, the real risk isn't a missing certificate — it's an employee who froze on an edge-case they were never properly prepared for. Simpled turns your policies into realistic decision scenarios so people build the judgment to handle them, and L&amp;D sees where extra coaching would help.</p>
         <a href="#final" class="btn btn-ghost">See compliance examples <span class="arr">→</span></a>
       </div>
 
@@ -1185,7 +1187,7 @@ footer{background:var(--dark);color:var(--mute);
           <div class="choice">Decline — the 30-day window has passed <span class="mk">✕</span></div>
           <div class="choice correct">Apply the defect-on-arrival exception &amp; escalate for QA log <span class="mk">✓</span></div>
           <div class="choice">Issue store credit to avoid escalation <span class="mk">✕</span></div>
-          <div class="verdict">Simpled scores the <b>reasoning</b>, not the click. This employee identified the exception that overrides the window — a measurable signal of decision readiness.</div>
+          <div class="verdict">Simpled coaches the <b>reasoning</b>, not the click. The employee learns to spot the exception that overrides the window — and walks into the next refund call already knowing what to do.</div>
         </div>
       </div>
     </div>
@@ -1218,39 +1220,39 @@ footer{background:var(--dark);color:var(--mute);
     <div class="shead">
       <div>
         <span class="kicker">09 — Outcomes</span>
-        <h2>What enterprise teams can finally measure.</h2>
+        <h2>What L&amp;D and employees finally get out of training.</h2>
       </div>
     </div>
     <div class="out-grid">
       <div class="out-card reveal" data-n="01">
-        <div class="ol">Knowledge gaps</div>
-        <h3>Gaps by team</h3>
-        <p>See which departments understand the process and which need intervention now.</p>
+        <div class="ol">Support</div>
+        <h3>Targeted coaching, not blanket retraining</h3>
+        <p>See exactly which topics a team would benefit from refreshing — so support reaches the right people instead of everyone losing another afternoon.</p>
       </div>
       <div class="out-card reveal" data-n="02" style="--d:.06s">
-        <div class="ol">Mobility</div>
-        <h3>Role readiness</h3>
-        <p>Identify who is ready for a new role, new workflow or new responsibility.</p>
+        <div class="ol">Growth</div>
+        <h3>Clear path to the next role</h3>
+        <p>Employees see what skills the next role asks for and how close they are to it — turning training into career momentum instead of a quarterly chore.</p>
       </div>
       <div class="out-card reveal" data-n="03" style="--d:.12s">
-        <div class="ol">Policy</div>
-        <h3>Policy understanding</h3>
-        <p>Know whether employees understand updated SOPs — not just whether they opened them.</p>
+        <div class="ol">Confidence</div>
+        <h3>Confidence in updated policies</h3>
+        <p>When SOPs change, employees feel prepared for the new way of working — not blindsided the first time the change affects a real customer.</p>
       </div>
       <div class="out-card reveal" data-n="04">
-        <div class="ol">Risk</div>
-        <h3>Compliance risk</h3>
-        <p>Spot high-risk knowledge gaps before they become audit, legal or operational issues.</p>
+        <div class="ol">Calm</div>
+        <h3>Compliance without the anxiety</h3>
+        <p>Audit-ready evidence that people genuinely know the policy — built quietly in the background, no scramble before the next regulator visit.</p>
       </div>
       <div class="out-card reveal" data-n="05" style="--d:.06s">
         <div class="ol">Freshness</div>
-        <h3>Training freshness</h3>
-        <p>Keep learning content aligned with the latest documents and process changes.</p>
+        <h3>Training that matches today's process</h3>
+        <p>Update an SOP and the learning updates with it — so employees are never being taught a workflow that no longer exists.</p>
       </div>
       <div class="out-card reveal" data-n="06" style="--d:.12s">
         <div class="ol">AI</div>
-        <h3>Workforce AI readiness</h3>
-        <p>Understand which teams are ready to use AI tools safely and effectively.</p>
+        <h3>Teams that feel ready for AI</h3>
+        <p>Employees get the context, guardrails and practice they need to use new AI tools well — instead of being handed a login and told to figure it out.</p>
       </div>
     </div>
   </div>
@@ -1298,13 +1300,13 @@ footer{background:var(--dark);color:var(--mute);
 <section class="final" id="final">
   <div class="wrap">
     <span class="kicker center">Get started</span>
-    <h2>Stop guessing whether your employees <em>understand</em> the process.</h2>
-    <p>Turn your internal documents into personalized training, assessments and knowledge-gap dashboards — in minutes.</p>
+    <h2>Give your teams the training they <em>actually need</em>.</h2>
+    <p>Turn your internal documents into personalized learning, real-world practice scenarios, and a clear view of where teams could use more support — in minutes.</p>
     <div class="final-actions">
       <a href="https://cal.com/simpled/30min" target="_blank" rel="noopener" class="btn btn-light">Book a Demo <span class="arr">→</span></a>
       <a href="#" class="btn btn-outline-light">Upload a sample document</a>
     </div>
-    <p class="final-micro">Drop in one SOP — see a generated module &amp; capability assessment in return.</p>
+    <p class="final-micro">Drop in one SOP — see a generated module &amp; a realistic practice scenario in return.</p>
   </div>
 </section>
 
