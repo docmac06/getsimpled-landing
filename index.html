@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simpled — Capability intelligence for enterprise learning</title>
-<!-- VERSION: v2-youtube-iframe-2026-05-21 -->
+<title>Simpled — Process readiness for operations teams</title>
+<!-- VERSION: v3-ops-reposition-2026-05-21 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -279,6 +279,67 @@ nav.scrolled{
 }
 .prob-glyph b{display:block;font-size:34px;font-family:"Fraunces",serif;
   font-weight:500;color:var(--signal);letter-spacing:0;margin-bottom:2px}
+
+/* ============== AI MOMENT ============== */
+.aimoment{background:var(--dark);color:var(--paper);position:relative;overflow:hidden}
+.aimoment::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 50% 60% at 80% 0%,rgba(216,72,27,.18),transparent 65%),
+    radial-gradient(ellipse 40% 50% at 10% 100%,rgba(216,72,27,.08),transparent 60%);
+}
+.aimoment .wrap{position:relative;z-index:1}
+.aimoment .kicker{color:var(--signal)}
+.aimoment-head{max-width:880px;margin-bottom:60px}
+.aimoment-head h2{
+  color:var(--paper);font-size:clamp(2.2rem,4.4vw,3.5rem);
+  margin:22px 0 28px;letter-spacing:-.02em;line-height:1.05;
+}
+.aimoment-head h2 em{font-style:italic;color:var(--signal);font-weight:500}
+.aimoment-head p{
+  font-size:18px;color:var(--mute);max-width:62ch;line-height:1.62;
+}
+.aimoment-head p b{color:var(--paper);font-weight:500}
+.aimoment-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  border-top:1px solid var(--dark-line);
+}
+.aim-card{
+  padding:34px 32px 36px;border-right:1px solid var(--dark-line);
+  position:relative;
+}
+.aim-card:last-child{border-right:0}
+.aim-card .aim-n{
+  font-family:"JetBrains Mono",monospace;font-size:11px;
+  letter-spacing:.16em;color:var(--signal);margin-bottom:16px;display:block;
+}
+.aim-card h3{
+  font-size:1.4rem;color:var(--paper);margin-bottom:12px;letter-spacing:-.01em;
+}
+.aim-card p{color:var(--mute);font-size:15px;line-height:1.6}
+.aim-stat{
+  display:flex;align-items:baseline;gap:14px;margin-top:22px;
+  padding-top:18px;border-top:1px solid var(--dark-line);
+}
+.aim-stat b{
+  font-family:"Fraunces",serif;font-weight:500;font-size:2.4rem;
+  color:var(--signal);line-height:1;letter-spacing:-.02em;
+}
+.aim-stat span{
+  font-family:"JetBrains Mono",monospace;font-size:11px;
+  color:var(--mute);letter-spacing:.06em;line-height:1.4;max-width:18ch;
+}
+.aimoment-tag{
+  display:inline-flex;align-items:center;gap:9px;margin-top:48px;
+  font-family:"JetBrains Mono",monospace;font-size:12px;
+  letter-spacing:.08em;color:var(--paper);
+  padding:11px 18px;border:1px dashed rgba(216,72,27,.5);border-radius:4px;
+  background:rgba(216,72,27,.06);
+}
+.aimoment-tag::before{
+  content:"";width:7px;height:7px;border-radius:50%;background:var(--signal);
+  animation:pulse 2.4s infinite;
+}
 
 /* ============== SOLUTION ============== */
 .solution{background:var(--paper-2)}
@@ -556,8 +617,9 @@ nav.scrolled{
 
 /* ============== COMPLIANCE ============== */
 .comp{background:var(--paper)}
-.comp-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
-.comp-copy h2{font-size:clamp(2rem,3.6vw,3rem);margin:18px 0 20px;max-width:16ch}
+.comp-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:start}
+.comp-copy{padding-top:30px}
+.comp-copy h2{font-size:clamp(2rem,3.4vw,2.85rem);margin:18px 0 20px;max-width:18ch}
 .comp-copy p{font-size:16.5px;color:var(--ink-2);max-width:48ch;margin-bottom:26px}
 .scenario{
   background:var(--ink);color:var(--paper);border-radius:6px;padding:30px;
@@ -578,6 +640,84 @@ nav.scrolled{
 .scenario .verdict{margin-top:16px;font-size:11px;letter-spacing:.06em;
   color:var(--mute);border-top:1px solid var(--dark-line);padding-top:14px}
 .scenario .verdict b{color:var(--signal)}
+
+/* ============== AUDIT EVIDENCE CARD ============== */
+.audit{
+  background:var(--paper);border:1px solid var(--ink);border-radius:6px;
+  box-shadow:14px 14px 0 -1px var(--paper-2),14px 14px 0 0 var(--ink);
+  overflow:hidden;
+}
+.audit-head{
+  display:flex;justify-content:space-between;align-items:center;
+  background:var(--ink);color:var(--paper);padding:14px 22px;
+}
+.audit-head .at{
+  font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.16em;
+  text-transform:uppercase;display:flex;align-items:center;gap:10px;
+}
+.audit-head .at .stamp{
+  width:7px;height:7px;border-radius:50%;background:var(--signal);
+  animation:pulse 2.4s infinite;
+}
+.audit-head .who-asks{
+  font-family:"JetBrains Mono",monospace;font-size:10.5px;
+  letter-spacing:.08em;color:var(--mute);
+}
+.audit-q{
+  padding:18px 22px;border-bottom:1px solid var(--line-soft);
+  font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--ink-2);
+  background:var(--paper-2);
+}
+.audit-q b{color:var(--ink);font-weight:500}
+.audit-row{
+  display:grid;grid-template-columns:1.4fr 1.6fr 1fr 1.1fr;gap:14px;
+  padding:14px 22px;border-bottom:1px solid var(--line-soft);
+  font-size:13.5px;align-items:center;
+}
+.audit-row:last-of-type{border-bottom:0}
+.audit-row.header{
+  background:transparent;border-bottom:1px solid var(--line);
+  font-family:"JetBrains Mono",monospace;font-size:9.5px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);
+  padding-top:14px;padding-bottom:9px;
+}
+.audit-row .ar-name{font-weight:600}
+.audit-row .ar-name span{
+  display:block;font-family:"JetBrains Mono",monospace;font-size:10px;
+  color:var(--ink-3);letter-spacing:.04em;font-weight:400;margin-top:2px;
+}
+.audit-row .ar-pol{
+  font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--ink-2);
+  letter-spacing:.02em;line-height:1.4;
+}
+.audit-row .ar-pol b{color:var(--signal-2);font-weight:500}
+.audit-row .ar-date{
+  font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--ink-2);
+}
+.audit-row .ar-status{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:"JetBrains Mono",monospace;font-size:10.5px;
+  letter-spacing:.08em;text-transform:uppercase;font-weight:500;
+  padding:5px 9px;border-radius:2px;
+}
+.audit-row .ar-status.pass{
+  color:var(--signal-2);background:var(--signal-tint);
+  border:1px solid rgba(216,72,27,.3);
+}
+.audit-row .ar-status.pass::before{
+  content:"";width:6px;height:6px;border-radius:50%;background:var(--signal);
+}
+.audit-foot{
+  padding:14px 22px;background:var(--paper-2);
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:"JetBrains Mono",monospace;font-size:11px;
+  color:var(--ink-2);flex-wrap:wrap;gap:8px;
+}
+.audit-foot .download{
+  display:inline-flex;align-items:center;gap:6px;color:var(--signal-2);
+  font-weight:500;letter-spacing:.04em;
+}
+.audit-foot .download::before{content:"⤓";font-size:13px}
 
 /* ============== AI READINESS ============== */
 .ai{background:var(--paper-2)}
@@ -612,6 +752,29 @@ nav.scrolled{
   letter-spacing:.13em;text-transform:uppercase;color:var(--signal);margin-bottom:14px}
 .out-card h3{font-size:1.3rem;margin-bottom:9px}
 .out-card p{font-size:14.5px;color:var(--ink-2)}
+.out-card.wide{
+  grid-column:span 2;background:var(--ink);color:var(--paper);border-color:var(--ink);
+  padding:36px 36px 32px;display:grid;grid-template-columns:1.4fr 1fr;gap:36px;align-items:center;
+}
+.out-card.wide::before{color:rgba(243,239,230,.06)}
+.out-card.wide .ol{color:var(--signal)}
+.out-card.wide h3{font-size:1.6rem;color:var(--paper);max-width:18ch;line-height:1.15}
+.out-card.wide p{color:var(--mute);font-size:15px;max-width:38ch}
+.out-card.wide .roi-block{
+  border-left:1px solid var(--dark-line);padding:8px 0 8px 28px;
+}
+.out-card.wide .roi-block .rb-lbl{
+  font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--mute);margin-bottom:10px;
+}
+.out-card.wide .roi-block .rb-stat{
+  font-family:"Fraunces",serif;font-weight:500;font-size:2.1rem;
+  color:var(--signal);line-height:1.05;letter-spacing:-.015em;margin-bottom:8px;
+}
+.out-card.wide .roi-block .rb-foot{
+  font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--mute);
+  letter-spacing:.04em;line-height:1.5;
+}
 
 /* ============== TRUST ============== */
 .trust{background:var(--paper-2)}
@@ -702,6 +865,8 @@ footer{background:var(--dark);color:var(--mute);
 /* ============== RESPONSIVE ============== */
 @media(max-width:1080px){
   .prob-grid,.sol-grid,.use-grid,.ai-grid,.out-grid{grid-template-columns:repeat(2,1fr)}
+  .out-card.wide{grid-template-columns:1fr;gap:24px}
+  .out-card.wide .roi-block{border-left:0;border-top:1px solid var(--dark-line);padding:22px 0 0}
   .prob-card.w2,.prob-card.w3{grid-column:span 1}
   .prob-card.w6{grid-column:span 2}
   .ind-grid{grid-template-columns:repeat(2,1fr)}
@@ -710,6 +875,11 @@ footer{background:var(--dark);color:var(--mute);
   .assess-grid{grid-template-columns:1fr;gap:0}
   .assess-vs{flex-direction:row;padding:18px 0}
   .assess-vs .ln{width:auto;height:1px;flex:1}
+  .aimoment-grid{grid-template-columns:1fr;border-top:0}
+  .aim-card{border-right:0;border-bottom:1px solid var(--dark-line)}
+  .aim-card:last-child{border-bottom:0}
+  .audit-row{grid-template-columns:1fr 1fr;gap:10px 14px}
+  .audit-row.header{display:none}
 }
 @media(max-width:760px){
   .assess{padding:78px 0}
@@ -745,13 +915,13 @@ footer{background:var(--dark);color:var(--mute);
 <!-- ================= NAV ================= -->
 <nav id="nav">
   <a class="brand" href="#top">
-    <span class="mark"></span>Simpled <small>capability intel</small>
+    <span class="mark"></span>Simpled <small>process readiness</small>
   </a>
   <div class="nav-links">
     <a href="#problem">Problem</a>
+    <a href="#ai-moment">AI moment</a>
     <a href="#how">How it works</a>
     <a href="#diff">Why Simpled</a>
-    <a href="#uses">Use cases</a>
     <a href="#outcomes">Outcomes</a>
   </div>
   <div class="nav-cta">
@@ -763,38 +933,38 @@ footer{background:var(--dark);color:var(--mute);
 <header class="hero" id="top">
   <div class="wrap">
     <div class="hero-top">
-      <span class="kicker">Enterprise capability intelligence</span>
-      <h1>Help your teams <span class="hl">actually do the work</span> — not just finish the training.</h1>
-      <p class="hero-sub">Turn your existing SOPs, onboarding docs, policies and product guides into role-specific learning in minutes. See where your people need support, refresh content when processes change, and give every employee what they need to do their job with confidence.</p>
+      <span class="kicker">Operational readiness, end-to-end</span>
+      <h1>The gap between your SOPs and your floor is also your <span class="hl">biggest audit risk</span>. Close it.</h1>
+      <p class="hero-sub">Every operations leader feels the gap as friction. Every compliance officer feels it as audit exposure. They're the same gap. Simpled closes it by turning every SOP, policy and process change into an engaging whiteboard animation video followed by decision drills — and quietly accumulates audit-grade evidence that operators were trained on the current version. So the gap closes the day the policy ships, not weeks later when the audit finds it.</p>
       <div class="hero-actions">
         <a href="https://cal.com/simpled/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a Demo <span class="arr">→</span></a>
         <a href="#how" class="btn btn-ghost">See how it works</a>
       </div>
-      <p class="hero-micro">●&nbsp;&nbsp;<b>No LMS migration.</b>&nbsp; Simpled layers onto the stack you already run.</p>
-      <p class="support-line">Built for enterprise L&amp;D · Operations · Compliance · Transformation teams</p>
+      <p class="hero-micro">●&nbsp;&nbsp;<b>No LMS migration.</b>&nbsp; Sits on top of the systems Ops already runs.</p>
+      <p class="support-line">Built for Operations · Compliance · Risk · Quality &amp; Process Excellence</p>
     </div>
 
     <!-- DASHBOARD -->
     <div class="dash" id="dash">
       <div class="dash-head">
-        <span class="title"><span class="dot"></span>Team Enablement View</span>
-        <span class="live">Q2 — 3 topics to support</span>
+        <span class="title"><span class="dot"></span>Process Adherence — Live</span>
+        <span class="live">3 processes drifting from current SOP</span>
       </div>
       <div class="dash-cols">
-        <div>Team</div>
-        <div>Training completed</div>
-        <div>Confidence in applying it</div>
-        <div>Topics to strengthen <span class="col-hint">— focus next sprint</span></div>
+        <div>Team / Site</div>
+        <div>SOP rolled out to</div>
+        <div>Running it correctly</div>
+        <div>Where the floor is drifting <span class="col-hint">— fix this week</span></div>
       </div>
 
       <div class="row">
-        <div class="team">Claims Team<span>148 people</span></div>
+        <div class="team">Claims Ops<span>148 ops · 4 sites</span></div>
         <div class="metric">
-          <div class="lbl"><em>completed</em><b>92%</b></div>
+          <div class="lbl"><em>briefed</em><b>92%</b></div>
           <div class="bar done"><i style="--w:92%"></i></div>
         </div>
         <div class="metric">
-          <div class="lbl"><em>confidence</em><b>61%</b></div>
+          <div class="lbl"><em>executing</em><b>61%</b></div>
           <div class="bar know"><i style="--w:61%"></i></div>
         </div>
         <div class="risk">
@@ -804,13 +974,13 @@ footer{background:var(--dark);color:var(--mute);
       </div>
 
       <div class="row">
-        <div class="team">Sales Ops<span>62 people</span></div>
+        <div class="team">Sales Ops<span>62 ops · 2 regions</span></div>
         <div class="metric">
-          <div class="lbl"><em>completed</em><b>88%</b></div>
+          <div class="lbl"><em>briefed</em><b>88%</b></div>
           <div class="bar done"><i style="--w:88%"></i></div>
         </div>
         <div class="metric">
-          <div class="lbl"><em>confidence</em><b>74%</b></div>
+          <div class="lbl"><em>executing</em><b>74%</b></div>
           <div class="bar know"><i style="--w:74%"></i></div>
         </div>
         <div class="risk">
@@ -819,24 +989,24 @@ footer{background:var(--dark);color:var(--mute);
       </div>
 
       <div class="row">
-        <div class="team">Customer Support<span>210 people</span></div>
+        <div class="team">Customer Support<span>210 ops · 6 shifts</span></div>
         <div class="metric">
-          <div class="lbl"><em>completed</em><b>96%</b></div>
+          <div class="lbl"><em>briefed</em><b>96%</b></div>
           <div class="bar done"><i style="--w:96%"></i></div>
         </div>
         <div class="metric">
-          <div class="lbl"><em>confidence</em><b>58%</b></div>
+          <div class="lbl"><em>executing</em><b>58%</b></div>
           <div class="bar know"><i style="--w:58%"></i></div>
         </div>
         <div class="risk">
-          <span class="tag hi">Refund Policy</span>
+          <span class="tag hi">Refund Policy v4.2</span>
           <span class="tag">AI Tool Usage</span>
         </div>
       </div>
 
       <div class="dash-foot">
-        <span><span class="legend-chip"></span>highlighted topics = where extra coaching or refresher content would help most</span>
-        <span class="gap">↗ recommend a 2-week refresher sprint</span>
+        <span><span class="legend-chip"></span>highlighted = SOP rolled out, but the floor isn't yet running it the new way</span>
+        <span class="gap">↗ targeted refresher recommended in next shift</span>
       </div>
     </div>
   </div>
@@ -848,41 +1018,75 @@ footer{background:var(--dark);color:var(--mute);
     <div class="shead">
       <div>
         <span class="kicker">01 — The problem</span>
-        <h2>Most enterprise training teaches people to pass a module. Not to do the work.</h2>
+        <h2>SOPs ship. The floor doesn't catch up. Operations pays the bill.</h2>
       </div>
-      <p class="shead-side reveal">Five reasons today's L&amp;D stack leaves employees under-supported on the things they actually have to do every day.</p>
+      <p class="shead-side reveal">Five reasons operating procedures keep getting out of sync with how the work actually gets done.</p>
     </div>
 
     <div class="prob-grid">
       <div class="prob-card w6 reveal">
         <div class="ptxt">
           <span class="pn">01</span>
-          <h3>Finishing a module isn't the same as feeling ready.</h3>
-          <p>An LMS tells you whether someone clicked through the slides. It doesn't tell you whether they walked away confident enough to apply the process when a real customer, a real edge case, or a real escalation lands in front of them.</p>
+          <h3>SOPs live in a folder. Decisions happen on the floor.</h3>
+          <p>The policy team publishes v4.2 in Confluence. Weeks later, half the floor is still working off v3, the other half thinks they're on v4 but quietly skip the new step. The first signal usually comes from a customer complaint, a QA exception, or an audit finding — long after the gap opened.</p>
         </div>
-        <div class="prob-glyph"><span><b>100%</b>completed<br>—<br><b style="color:var(--mute)">?</b>confident</span></div>
+        <div class="prob-glyph"><span><b>v4.2</b>shipped<br>—<br><b style="color:var(--mute)">v3</b>on floor</span></div>
       </div>
       <div class="prob-card w3 reveal" style="--d:.05s">
         <span class="pn">02</span>
-        <h3>Content goes stale fast.</h3>
-        <p>SOPs, policies, workflows, tools and regulations change constantly. Employees are left learning from training that no longer matches how the work is actually done.</p>
+        <h3>Every process change costs you weeks.</h3>
+        <p>Policy team writes the SOP. Training catches up months later. By the time the briefing deck is built, the process has moved again.</p>
       </div>
       <div class="prob-card w3 reveal" style="--d:.1s">
         <span class="pn">03</span>
-        <h3>Generic training wastes people's time.</h3>
-        <p>Employees sit through broad, one-size-fits-all content even though their roles, workflows, markets and responsibilities look nothing alike.</p>
+        <h3>A 200-page SOP doesn't change behavior.</h3>
+        <p>Frontline teams need the three things that matter for *their* role on *their* shift — not the full document forwarded as an email attachment.</p>
       </div>
       <div class="prob-card w3 reveal" style="--d:.05s">
         <span class="pn">04</span>
-        <h3>Certificates don't build confidence.</h3>
-        <p>A completion record proves attendance. It doesn't help an employee feel prepared the next time a policy edge-case or regulator question lands in their lap.</p>
+        <h3>Audits become a scramble.</h3>
+        <p>Proving the floor was trained on the current policy means digging through email read-receipts, sign-off sheets, and screenshots. The evidence is shaky and the prep is exhausting.</p>
       </div>
       <div class="prob-card w3 reveal" style="--d:.1s">
         <span class="pn">05</span>
-        <h3>People are being asked to use AI with no real support.</h3>
-        <p>Enterprises roll out AI tools faster than employees can be supported in using them safely, effectively, and within real business context.</p>
+        <h3>New AI workflows are rolling out with no operating manual.</h3>
+        <p>Teams are being handed AI tools with policy implications, escalation paths, and guardrails — and zero structured rollout to learn the new operating model.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ================= AI MOMENT ================= -->
+<section class="section aimoment" id="ai-moment">
+  <div class="wrap">
+    <div class="aimoment-head reveal">
+      <span class="kicker">The AI moment</span>
+      <h2>Organizations are rewriting how the work gets done. <em>The floor keeps catching up late.</em></h2>
+      <p>The AI era isn't a tool rollout — it's an <b>operating-model rewrite</b>. New workflows, new escalation paths, new exception rules, new things humans should and shouldn't do. The operations leaders we talk to are shipping more SOP changes per quarter than they used to ship in a year. And the gap between policy and practice — the gap Simpled exists to close — is widening.</p>
+    </div>
+
+    <div class="aimoment-grid">
+      <div class="aim-card reveal">
+        <span class="aim-n">01 / Velocity</span>
+        <h3>Operating procedures get rewritten more often</h3>
+        <p>AI workflows, regulatory updates, and new tooling mean the operating procedure for a single role can change multiple times a quarter. The traditional rollout cadence — deck, training session, sign-off sheet — wasn't designed for that pace.</p>
+        <div class="aim-stat"><b>↑</b><span>frequency of SOP &amp; policy updates per role</span></div>
+      </div>
+      <div class="aim-card reveal" style="--d:.08s">
+        <span class="aim-n">02 / Ambiguity</span>
+        <h3>The job itself is shifting</h3>
+        <p>It's no longer just "follow the SOP." It's "use the AI output, decide when to trust it, know when to overrule, log the override correctly." The judgment-load on each decision is going up — and old quiz-style training was never designed for that.</p>
+        <div class="aim-stat"><b>↑</b><span>judgment per decision &mdash; not just per shift</span></div>
+      </div>
+      <div class="aim-card reveal" style="--d:.16s">
+        <span class="aim-n">03 / Stakes</span>
+        <h3>Failure modes have changed shape</h3>
+        <p>When the floor follows yesterday's SOP on today's AI workflow, the failure mode isn't a slow customer call — it's a regulator letter, a data leak, or a bad automated decision at scale. The downside risk is now front-page material.</p>
+        <div class="aim-stat"><b>↑</b><span>severity of process-driven incidents</span></div>
+      </div>
+    </div>
+
+    <span class="aimoment-tag">Built for the speed at which operations is changing right now</span>
   </div>
 </section>
 
@@ -891,27 +1095,27 @@ footer{background:var(--dark);color:var(--mute);
   <div class="wrap">
     <div class="shead col">
       <span class="kicker center">02 — The solution</span>
-      <h2>Generate, personalize and measure training from knowledge your company already has.</h2>
+      <h2>From SOP shipped → floor running it correctly — in the same week.</h2>
     </div>
 
     <div class="sol-grid">
       <div class="sol-card reveal">
         <div class="sol-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
         <span class="sn">01 / Generate</span>
-        <h3>Training in minutes</h3>
-        <p>Upload SOPs, onboarding docs, policies, product manuals, compliance documents or internal playbooks. Simpled turns them into structured modules, quizzes, scenarios and assessments.</p>
+        <h3>From SOP to ready-to-deploy briefing</h3>
+        <p>Upload the latest SOP, policy, ops manual or process update. Simpled produces role-specific briefings, decision drills, and on-the-job checks the same day — not three weeks later.</p>
       </div>
       <div class="sol-card reveal" style="--d:.1s">
         <div class="sol-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></div>
-        <span class="sn">02 / Personalize</span>
-        <h3>By role &amp; workflow</h3>
-        <p>Training adapts to each employee's role, department, seniority, market and responsibilities — so people learn what actually matters for the work in front of them.</p>
+        <span class="sn">02 / Roll out</span>
+        <h3>By role, shift, branch, region</h3>
+        <p>Operators get the exact three things that matter for their role on their shift. No 200-page document. No generic e-learning. Just what they need to run the new process correctly.</p>
       </div>
       <div class="sol-card reveal" style="--d:.2s">
         <div class="sol-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4"/></svg></div>
-        <span class="sn">03 / Support</span>
-        <h3>See where teams need help</h3>
-        <p>Spot the topics where employees would benefit from extra coaching, a refresher, or clearer documentation — so L&amp;D can step in with support, not paperwork.</p>
+        <span class="sn">03 / Adherence</span>
+        <h3>See where the floor is drifting</h3>
+        <p>Spot the teams, sites and shifts where the new SOP isn't being executed yet — so a supervisor can step in this week, not after the next audit.</p>
       </div>
     </div>
   </div>
@@ -924,35 +1128,35 @@ footer{background:var(--dark);color:var(--mute);
     <div class="shead">
       <div>
         <span class="kicker">03 — How it works</span>
-        <h2>From internal documents to measurable capability — in minutes.</h2>
+        <h2>From SOP published — to floor running it correctly — in days, not months.</h2>
       </div>
     </div>
 
     <div class="steps">
       <div class="step reveal">
         <div class="sx">01<em>Upload</em></div>
-        <h3>Upload your knowledge base</h3>
-        <p>Add SOPs, onboarding docs, policies, manuals, process guides, compliance documents or product updates. Simpled reads the source material your company already trusts.</p>
+        <h3>Drop in the latest SOP</h3>
+        <p>Add the policy, SOP, operations manual, regulatory document or process update. The same document the policy team just signed off.</p>
       </div>
       <div class="step reveal">
         <div class="sx">02<em>Generate</em></div>
-        <h3>AI generates training modules</h3>
-        <p>The platform creates role-specific lessons, quizzes, simulations, decision scenarios and assessments — structured, branded and ready to deploy.</p>
+        <h3>Simpled produces the rollout assets</h3>
+        <p>Role-specific briefings, realistic decision drills, on-the-job checks and supervisor talking points — generated from your SOP, ready to deploy the same day.</p>
       </div>
       <div class="step reveal">
-        <div class="sx">03<em>Learn</em></div>
-        <h3>Employees learn through real scenarios</h3>
-        <p>Instead of passive slides, employees are tested on judgment, process application and decision-making — the way work actually happens.</p>
+        <div class="sx">03<em>Deploy</em></div>
+        <h3>Every operator gets exactly what they need</h3>
+        <p>The right 3 things for their role on their shift — not the 200-page document. Briefings can run on shift handover, mobile, or before login to a critical system.</p>
       </div>
       <div class="step reveal">
-        <div class="sx">04<em>Support</em></div>
-        <h3>L&amp;D sees where teams need help</h3>
-        <p>Get an honest view of confidence by team, role, region or topic — so coaching, refresher content and 1:1 support land exactly where they'll have the most impact.</p>
+        <div class="sx">04<em>Adherence</em></div>
+        <h3>Ops sees where the floor is drifting</h3>
+        <p>An honest view by team, site, shift or region — so supervisors can intervene this week, not after the next quality incident.</p>
       </div>
       <div class="step reveal">
-        <div class="sx">05<em>Loop</em></div>
-        <h3>Update instantly as processes change</h3>
-        <p>When an SOP or policy changes, training is regenerated and redeployed in minutes — so learning never falls behind the business.</p>
+        <div class="sx">05<em>Re-roll</em></div>
+        <h3>When the SOP changes again, everything refreshes</h3>
+        <p>Update the source document and the briefings, drills and checks regenerate automatically. The floor is never more than 24 hours behind the policy team.</p>
       </div>
     </div>
   </div>
@@ -963,9 +1167,9 @@ footer{background:var(--dark);color:var(--mute);
   <div class="wrap">
     <div class="shead col">
       <span class="kicker center">See it in action</span>
-      <h2>Your documents become whiteboard videos — in minutes.</h2>
+      <h2>Your SOPs become role-specific briefings — in minutes.</h2>
     </div>
-    <p class="vid-lead">Simpled's <b>proprietary animation engine</b> turns a static SOP, policy or product manual into a clear, narrated whiteboard video your teams will actually watch — generated automatically, in minutes, not production cycles.</p>
+    <p class="vid-lead">Simpled's <b>proprietary whiteboard engine</b> turns a static SOP, policy or process document into a clear, narrated walkthrough that operators will actually watch — generated automatically, in minutes, not production cycles.</p>
 
     <div class="vidframe reveal">
       <span class="vid-src"><span class="d"></span>generated from: Cybersecurity-Compliance-SOP_v4.2.pdf</span>
@@ -994,19 +1198,19 @@ footer{background:var(--dark);color:var(--mute);
   <div class="wrap">
     <div class="shead col">
       <span class="kicker center">The assessment gap</span>
-      <h2>Memorizing the answer is easy. Doing the work is harder — and worth practicing.</h2>
+      <h2>Read the SOP. Pass the quiz. Still run the old version on the floor.</h2>
     </div>
 
     <div class="assess-grid">
       <div class="qcard basic reveal">
-        <span class="qtag"><span class="mk">?</span>Basic LMS quiz</span>
-        <div class="qq">"What is the correct policy?"</div>
+        <span class="qtag"><span class="mk">?</span>Standard LMS check</span>
+        <div class="qq">"What does the new policy say?"</div>
         <div class="qopts">
           <div class="qopt"><span class="rd"></span>A — Within 30 days</div>
           <div class="qopt"><span class="rd"></span>B — Within 60 days</div>
           <div class="qopt"><span class="rd"></span>C — Within 90 days</div>
         </div>
-        <p class="qcap"><b>Tests memory.</b> The employee leaves with a checkmark — but no real practice for the moment the actual situation shows up at their desk.</p>
+        <p class="qcap"><b>Tests memory.</b> The operator leaves with a checkmark — but no practice for the moment the actual situation lands at the counter.</p>
       </div>
 
       <div class="assess-vs reveal" style="--d:.08s">
@@ -1016,10 +1220,10 @@ footer{background:var(--dark);color:var(--mute);
       </div>
 
       <div class="qcard better reveal" style="--d:.16s">
-        <span class="qtag"><span class="mk">✓</span>Simpled assessment</span>
-        <div class="qq">"Here is a real workplace situation. <em>What would you do next?</em>"</div>
-        <div class="scenebox">A customer disputes a charge <b>47 days</b> after purchase, claiming the product was <b>defective on arrival</b>. The standard window is 30 days. Your move?</div>
-        <p class="qcap"><b>Tests judgment.</b> You can't memorize your way through a decision — the employee builds and demonstrates the confidence to apply the policy when work actually gets messy.</p>
+        <span class="qtag"><span class="mk">✓</span>Simpled decision drill</span>
+        <div class="qq">"Here is a real situation on the floor. <em>What's your next move?</em>"</div>
+        <div class="scenebox">A customer disputes a charge <b>47 days</b> after purchase, claiming the product was <b>defective on arrival</b>. The standard window is 30 days. What do you do?</div>
+        <p class="qcap"><b>Drills the call.</b> The operator practices the actual decision they'll have to make on the next shift — so the new SOP gets followed in the moment, not just memorized.</p>
       </div>
     </div>
   </div>
@@ -1032,49 +1236,49 @@ footer{background:var(--dark);color:var(--mute);
     <div class="shead">
       <div>
         <span class="kicker">04 — Why Simpled</span>
-        <h2>Not another LMS. A capability intelligence layer for enterprise learning.</h2>
+        <h2>Not a learning platform. A process-readiness layer for Operations.</h2>
       </div>
-      <p class="shead-side reveal">You already own an LMS. Simpled is the intelligence and content-automation layer that sits on top of it.</p>
+      <p class="shead-side reveal">You already have an LMS, a Confluence, an SOP repository. Simpled is the thin operations layer that turns those documents into something the floor actually executes.</p>
     </div>
 
     <div class="cmp reveal">
       <div class="cmp-head">
-        <div class="old">Traditional LMS</div>
-        <div class="new">▲&nbsp; Simpled</div>
+        <div class="old">How rollouts work today</div>
+        <div class="new">▲&nbsp; With Simpled</div>
       </div>
       <div class="cmp-row">
-        <div class="old"><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><s>Tracks completion</s></div>
-        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Builds confidence</div>
+        <div class="old"><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><s>SOP published → weeks of training prep</s></div>
+        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>SOP published → briefings ready same day</div>
       </div>
       <div class="cmp-row">
-        <div class="old"><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><s>Generic modules</s></div>
-        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Role-specific training</div>
+        <div class="old"><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><s>200-page document sent to everyone</s></div>
+        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>The 3 things that matter, per role, per shift</div>
       </div>
       <div class="cmp-row">
-        <div class="old"><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><s>Manual content creation</s></div>
-        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>AI-generated modules from your docs</div>
+        <div class="old"><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><s>Manual deck-building, every rollout</s></div>
+        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Briefings generated from your SOP, automatically</div>
       </div>
       <div class="cmp-row">
-        <div class="old"><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><s>Static courses</s></div>
-        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Continuously updated content</div>
+        <div class="old"><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><s>Quiz score = "the team is trained"</s></div>
+        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Decision drills — practice the real call</div>
       </div>
       <div class="cmp-row">
-        <div class="old"><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><s>Compliance certificates</s></div>
-        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Real practice for real decisions</div>
+        <div class="old"><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><s>Audit prep = scramble for evidence</s></div>
+        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Adherence evidence, built passively, always on</div>
       </div>
       <div class="cmp-row">
-        <div class="old"><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><s>One-size-fits-all learning</s></div>
-        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Learning that meets people where they are</div>
+        <div class="old"><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><s>You find out about process drift in the QBR</s></div>
+        <div class="new"><svg class="c" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>You see drift in this week's adherence view</div>
       </div>
     </div>
 
     <p class="diff-punch reveal">
-      <span class="dp-1">Keep your LMS.</span> <span class="dp-2">Add real learning on top.</span>
+      <span class="dp-1">Keep your LMS, Confluence and SOPs.</span> <span class="dp-2">Add execution on top.</span>
     </p>
 
     <div class="diff-note reveal">
       <span class="b">[ NOTE ]</span>
-      <p>Simpled is <b>not a rip-and-replace.</b> It integrates with your existing L&amp;D stack — so adoption needs zero migration, zero retraining of admins, and zero disruption to courses already in flight.</p>
+      <p>Simpled is <b>not a rip-and-replace.</b> It reads from the document systems Operations already runs — and pushes the rollout out through the channels frontline teams already use. Zero migration. Zero new logins for the floor.</p>
     </div>
   </div>
 </section>
@@ -1083,39 +1287,39 @@ footer{background:var(--dark);color:var(--mute);
 <section class="section uses" id="uses">
   <div class="wrap">
     <div class="shead col">
-      <span class="kicker center">05 — Use cases</span>
-      <h2>Built for fast-changing enterprise knowledge.</h2>
+      <span class="kicker center">05 — Where it lands</span>
+      <h2>The moments where SOPs and the floor stop matching.</h2>
     </div>
     <div class="use-grid">
       <div class="use reveal">
         <span class="un">01</span>
-        <h3>Employee onboarding</h3>
-        <p>Turn onboarding manuals and role-specific documentation into personalized training paths from day one.</p>
+        <h3>Policy rollouts</h3>
+        <p>A new refund policy, escalation matrix, or risk threshold lands — get the whole floor running it correctly the same week.</p>
       </div>
       <div class="use reveal" style="--d:.06s">
         <span class="un">02</span>
-        <h3>SOP &amp; process training</h3>
-        <p>Help employees genuinely feel ready when a workflow changes — not learn the new version from a frustrated customer.</p>
+        <h3>Process &amp; system changes</h3>
+        <p>A workflow changes or a new tool ships. Briefings and on-the-job checks are ready the day the change goes live.</p>
       </div>
       <div class="use reveal" style="--d:.12s">
         <span class="un">03</span>
-        <h3>Compliance &amp; regulatory</h3>
-        <p>Move beyond certificates — give employees realistic practice so policy decisions feel familiar before they ever come up live.</p>
+        <h3>Regulatory updates</h3>
+        <p>A regulator publishes new guidance. Translate it into role-specific actions and audit-ready evidence the floor was actually briefed.</p>
       </div>
       <div class="use reveal">
         <span class="un">04</span>
-        <h3>AI tool adoption</h3>
-        <p>Train teams on AI workflows, risk awareness, data handling, prompt usage and domain-specific use cases.</p>
+        <h3>New-hire ramp-up</h3>
+        <p>Onboarding to a frontline role goes from weeks of shadowing to a structured, role-specific operational ramp.</p>
       </div>
       <div class="use reveal" style="--d:.06s">
         <span class="un">05</span>
-        <h3>Product &amp; policy updates</h3>
-        <p>Convert every product, policy or workflow change into targeted micro-training, automatically.</p>
+        <h3>AI tool rollouts</h3>
+        <p>New AI workflow on the floor — operators learn the new operating model, guardrails, escalation paths, and human-in-the-loop checkpoints.</p>
       </div>
       <div class="use reveal" style="--d:.12s">
         <span class="un">06</span>
-        <h3>Internal mobility &amp; upskilling</h3>
-        <p>Tie learning to role readiness, promotion paths and future opportunities across the org.</p>
+        <h3>Multi-site, multi-shift teams</h3>
+        <p>Branches, plants, contact centers, retail floors — same SOP, different shift patterns. Rollouts adapt to each one.</p>
       </div>
     </div>
   </div>
@@ -1126,29 +1330,29 @@ footer{background:var(--dark);color:var(--mute);
   <div class="wrap">
     <div class="growth-grid">
       <div class="growth-copy reveal">
-        <span class="kicker">06 — Built for growth</span>
-        <h2>Employees engage when learning is tied to growth.</h2>
-        <p>Mandatory training rarely drives engagement on its own. People learn when it helps them get promoted, earn more, switch roles, perform better, or simply stay relevant. Simpled connects learning progress to role readiness and skill development — so training feels less like a checkbox and more like career momentum.</p>
+        <span class="kicker">06 — Operator progression</span>
+        <h2>Frontline teams stay — when growth is visible.</h2>
+        <p>Operations attrition isn't just about pay. It's about people who can't see what comes next. Simpled connects each operator's process readiness to the next role on the ladder — shift lead, senior operator, supervisor — so growth feels visible, not vague. The floor stays. Hiring costs drop.</p>
         <div class="growth-list">
-          <div>Role-readiness score</div>
-          <div>Promotion pathway skills</div>
-          <div>"Ready for next role" dashboard</div>
-          <div>Personalized learning recommendations</div>
-          <div>Skill badges tied to internal mobility</div>
+          <div>Ready-for-next-role view per operator</div>
+          <div>Shift lead &amp; supervisor readiness</div>
+          <div>Cross-process certifications</div>
+          <div>Visible progression on the floor</div>
+          <div>Lower frontline attrition</div>
         </div>
       </div>
 
       <div class="reveal" style="--d:.12s">
         <div class="ready">
           <div class="ready-top">
-            <div class="who">Priya N.<span>Senior Claims Analyst</span></div>
+            <div class="who">Priya N.<span>Senior Claims Operator · Site 03</span></div>
             <span class="ready-badge">On track</span>
           </div>
-          <div class="ready-score"><b>78</b><em>/ 100 role-readiness</em></div>
-          <div class="ready-label">Next role · Claims Team Lead</div>
+          <div class="ready-score"><b>78</b><em>/ 100 ready for Shift Lead</em></div>
+          <div class="ready-label">Next role · Claims Shift Lead</div>
 
           <div class="skill">
-            <div class="sl"><span>Escalation judgment</span><em>92%</em></div>
+            <div class="sl"><span>Escalation handling</span><em>92%</em></div>
             <div class="bar know"><i style="--w:92%"></i></div>
           </div>
           <div class="skill">
@@ -1156,7 +1360,7 @@ footer{background:var(--dark);color:var(--mute);
             <div class="bar know"><i style="--w:71%"></i></div>
           </div>
           <div class="skill">
-            <div class="sl"><span>Team coaching &amp; QA</span><em>54%</em></div>
+            <div class="sl"><span>Floor coaching &amp; QA</span><em>54%</em></div>
             <div class="bar know"><i style="--w:54%"></i></div>
           </div>
           <div class="skill" style="margin-bottom:0">
@@ -1174,20 +1378,51 @@ footer{background:var(--dark);color:var(--mute);
   <div class="wrap">
     <div class="comp-grid">
       <div class="comp-copy reveal">
-        <span class="kicker">07 — Compliance</span>
-        <h2>Give employees the confidence to handle the hard calls.</h2>
-        <p>In regulated industries, the real risk isn't a missing certificate — it's an employee who froze on an edge-case they were never properly prepared for. Simpled turns your policies into realistic decision scenarios so people build the judgment to handle them, and L&amp;D sees where extra coaching would help.</p>
-        <a href="#final" class="btn btn-ghost">See compliance examples <span class="arr">→</span></a>
+        <span class="kicker">07 — Compliance &amp; audit defense</span>
+        <h2>Audit-grade evidence that operators knew the current policy.</h2>
+        <p>When a regulator asks <em>"prove your staff were trained on this specific control, on this date, on this policy version"</em> — the answer should not be a folder of email read-receipts. Simpled produces structured, queryable evidence as a byproduct of how the work runs: who was briefed, on which version, when, and how they performed on the decision drill that tested application.</p>
+        <p style="font-size:14.5px;color:var(--ink-3);max-width:46ch;margin-bottom:26px">The audit binder essentially writes itself — and the cost of a single avoided finding pays for the platform many times over.</p>
+        <a href="https://cal.com/simpled/30min" target="_blank" rel="noopener" class="btn btn-ghost">See a live audit-evidence demo <span class="arr">→</span></a>
       </div>
 
       <div class="reveal" style="--d:.12s">
-        <div class="scenario">
-          <div class="stag">Decision scenario · Refund Policy v4.2</div>
-          <p class="q">A customer disputes a charge 47 days after purchase and claims the product was defective on arrival. The standard refund window is 30 days. What do you do?</p>
-          <div class="choice">Decline — the 30-day window has passed <span class="mk">✕</span></div>
-          <div class="choice correct">Apply the defect-on-arrival exception &amp; escalate for QA log <span class="mk">✓</span></div>
-          <div class="choice">Issue store credit to avoid escalation <span class="mk">✕</span></div>
-          <div class="verdict">Simpled coaches the <b>reasoning</b>, not the click. The employee learns to spot the exception that overrides the window — and walks into the next refund call already knowing what to do.</div>
+        <div class="audit">
+          <div class="audit-head">
+            <span class="at"><span class="stamp"></span>Audit Evidence — Refund Policy v4.2</span>
+            <span class="who-asks">Q2 regulator request</span>
+          </div>
+          <div class="audit-q">Regulator query: <b>"Demonstrate all customer-facing staff were trained on the v4.2 defect-on-arrival exception, and tested on its correct application, before 14 Apr 2026."</b></div>
+
+          <div class="audit-row header">
+            <div>Operator</div>
+            <div>Policy version &amp; drill</div>
+            <div>Date</div>
+            <div>Status</div>
+          </div>
+
+          <div class="audit-row">
+            <div class="ar-name">Priya N.<span>Claims · Site 03</span></div>
+            <div class="ar-pol">Refund Policy <b>v4.2</b> · Defect-on-arrival drill</div>
+            <div class="ar-date">02 Apr 2026<br><span style="color:var(--ink-3);font-size:10.5px">14:22 IST</span></div>
+            <div><span class="ar-status pass">passed · 94%</span></div>
+          </div>
+          <div class="audit-row">
+            <div class="ar-name">Marcus T.<span>Support · Shift B</span></div>
+            <div class="ar-pol">Refund Policy <b>v4.2</b> · Defect-on-arrival drill</div>
+            <div class="ar-date">03 Apr 2026<br><span style="color:var(--ink-3);font-size:10.5px">09:08 IST</span></div>
+            <div><span class="ar-status pass">passed · 88%</span></div>
+          </div>
+          <div class="audit-row">
+            <div class="ar-name">Aisha R.<span>Support · Shift A</span></div>
+            <div class="ar-pol">Refund Policy <b>v4.2</b> · Defect-on-arrival drill</div>
+            <div class="ar-date">04 Apr 2026<br><span style="color:var(--ink-3);font-size:10.5px">11:47 IST</span></div>
+            <div><span class="ar-status pass">passed · 91%</span></div>
+          </div>
+
+          <div class="audit-foot">
+            <span>418 of 420 operators briefed &amp; tested on v4.2 before deadline</span>
+            <span class="download">Export audit packet (PDF)</span>
+          </div>
         </div>
       </div>
     </div>
@@ -1198,17 +1433,17 @@ footer{background:var(--dark);color:var(--mute);
 <section class="section ai" id="ai">
   <div class="wrap">
     <div class="ai-head reveal">
-      <span class="kicker">08 — AI readiness</span>
-      <h2>Close the AI capability gap across your workforce.</h2>
-      <p>Enterprises are investing in AI tools, but employees need more than prompt templates — they need workflow redesign, judgment, risk awareness and data literacy. Simpled turns your AI policies and internal best practices into practical training for every team.</p>
+      <span class="kicker">08 — AI workflow rollouts</span>
+      <h2>The tactical layer that lands AI transformations on the floor.</h2>
+      <p>When you ship an AI workflow, you're really shipping a new operating model. Simpled turns that operating model into the structured rollout that actually reaches the people running the work — so the policy team's intent shows up in operator behavior, not just in a Confluence page.</p>
     </div>
     <div class="ai-grid">
-      <div class="ai-chip reveal"><span class="ci">§</span>AI usage policy training</div>
-      <div class="ai-chip reveal" style="--d:.05s"><span class="ci">⌥</span>Department-specific AI workflows</div>
-      <div class="ai-chip reveal" style="--d:.1s"><span class="ci">!</span>Risk &amp; hallucination awareness</div>
-      <div class="ai-chip reveal"><span class="ci">⚿</span>Data privacy &amp; security</div>
-      <div class="ai-chip reveal" style="--d:.05s"><span class="ci">&gt;</span>Prompting for business functions</div>
-      <div class="ai-chip reveal" style="--d:.1s"><span class="ci">⊕</span>Human-in-the-loop decisions</div>
+      <div class="ai-chip reveal"><span class="ci">§</span>AI policy &amp; usage briefings</div>
+      <div class="ai-chip reveal" style="--d:.05s"><span class="ci">⌥</span>Per-role AI workflows</div>
+      <div class="ai-chip reveal" style="--d:.1s"><span class="ci">!</span>Override &amp; escalation paths</div>
+      <div class="ai-chip reveal"><span class="ci">⚿</span>Data handling guardrails</div>
+      <div class="ai-chip reveal" style="--d:.05s"><span class="ci">&gt;</span>When to trust, when to overrule</div>
+      <div class="ai-chip reveal" style="--d:.1s"><span class="ci">⊕</span>Human-in-the-loop checkpoints</div>
     </div>
   </div>
 </section>
@@ -1220,39 +1455,48 @@ footer{background:var(--dark);color:var(--mute);
     <div class="shead">
       <div>
         <span class="kicker">09 — Outcomes</span>
-        <h2>What L&amp;D and employees finally get out of training.</h2>
+        <h2>What Operations &amp; Compliance actually move with Simpled.</h2>
       </div>
+      <p class="shead-side reveal">We give <b style="color:var(--ink);font-weight:600">compliance teams</b> audit-grade proof, and <b style="color:var(--ink);font-weight:600">operations teams</b> visibility into whether critical procedures are actually executable.</p>
     </div>
     <div class="out-grid">
-      <div class="out-card reveal" data-n="01">
-        <div class="ol">Support</div>
-        <h3>Targeted coaching, not blanket retraining</h3>
-        <p>See exactly which topics a team would benefit from refreshing — so support reaches the right people instead of everyone losing another afternoon.</p>
+      <div class="out-card wide reveal" data-n="01">
+        <div>
+          <div class="ol">Audit defense</div>
+          <h3>Audit-grade evidence, accumulating quietly in the background</h3>
+          <p>Structured proof that every operator was briefed on the current policy version, and tested on its correct application — queryable by name, by site, by date, by policy. The audit binder writes itself.</p>
+        </div>
+        <div class="roi-block">
+          <div class="rb-lbl">Cost-of-finding math</div>
+          <div class="rb-stat">$50K&nbsp;&ndash;&nbsp;$5M+</div>
+          <div class="rb-foot">per regulatory finding avoided —<br>plus the audit-prep cost you stop paying every cycle.</div>
+        </div>
       </div>
+
       <div class="out-card reveal" data-n="02" style="--d:.06s">
-        <div class="ol">Growth</div>
-        <h3>Clear path to the next role</h3>
-        <p>Employees see what skills the next role asks for and how close they are to it — turning training into career momentum instead of a quarterly chore.</p>
+        <div class="ol">Velocity</div>
+        <h3>From SOP shipped → floor running it</h3>
+        <p>The time between "policy team signed it off" and "the floor is doing it correctly" goes from weeks to days.</p>
       </div>
       <div class="out-card reveal" data-n="03" style="--d:.12s">
-        <div class="ol">Confidence</div>
-        <h3>Confidence in updated policies</h3>
-        <p>When SOPs change, employees feel prepared for the new way of working — not blindsided the first time the change affects a real customer.</p>
+        <div class="ol">Adherence</div>
+        <h3>Less process drift, by site &amp; shift</h3>
+        <p>See where the floor isn't yet running the new SOP — and put a targeted refresher in the next shift, not the next quarter.</p>
       </div>
       <div class="out-card reveal" data-n="04">
-        <div class="ol">Calm</div>
-        <h3>Compliance without the anxiety</h3>
-        <p>Audit-ready evidence that people genuinely know the policy — built quietly in the background, no scramble before the next regulator visit.</p>
+        <div class="ol">Quality</div>
+        <h3>Fewer process-driven incidents</h3>
+        <p>The most common QA findings — wrong SOP version applied, missed escalation, stale exception rules — drop because the floor was actually briefed on the current version.</p>
       </div>
       <div class="out-card reveal" data-n="05" style="--d:.06s">
-        <div class="ol">Freshness</div>
-        <h3>Training that matches today's process</h3>
-        <p>Update an SOP and the learning updates with it — so employees are never being taught a workflow that no longer exists.</p>
+        <div class="ol">Ramp</div>
+        <h3>Faster new-hire ramp</h3>
+        <p>New operators reach competence on critical processes faster — by working through realistic decision drills instead of shadow shifts.</p>
       </div>
       <div class="out-card reveal" data-n="06" style="--d:.12s">
-        <div class="ol">AI</div>
-        <h3>Teams that feel ready for AI</h3>
-        <p>Employees get the context, guardrails and practice they need to use new AI tools well — instead of being handed a login and told to figure it out.</p>
+        <div class="ol">Retention</div>
+        <h3>Visible progression on the floor</h3>
+        <p>Operators see what's next and how close they are — the cheapest, most reliable lever you have against frontline attrition.</p>
       </div>
     </div>
   </div>
@@ -1262,20 +1506,20 @@ footer{background:var(--dark);color:var(--mute);
 <section class="section trust">
   <div class="wrap">
     <div class="shead col">
-      <span class="kicker center">Built for complex workforces</span>
-      <h2>Designed for enterprise teams where knowledge changes fast.</h2>
+      <span class="kicker center">Built for the floor</span>
+      <h2>For operations where SOPs change weekly — and the floor has to keep up.</h2>
     </div>
     <div class="ind-grid">
-      <div class="ind reveal"><span class="in-no">SECTOR 01</span>Healthcare</div>
-      <div class="ind reveal" style="--d:.04s"><span class="in-no">SECTOR 02</span>Financial Services</div>
-      <div class="ind reveal" style="--d:.08s"><span class="in-no">SECTOR 03</span>Insurance</div>
-      <div class="ind reveal" style="--d:.12s"><span class="in-no">SECTOR 04</span>Manufacturing</div>
-      <div class="ind reveal"><span class="in-no">SECTOR 05</span>Customer Support</div>
-      <div class="ind reveal" style="--d:.04s"><span class="in-no">SECTOR 06</span>BPOs</div>
-      <div class="ind reveal" style="--d:.08s"><span class="in-no">SECTOR 07</span>SaaS Companies</div>
-      <div class="ind reveal" style="--d:.12s"><span class="in-no">SECTOR 08</span>Regulated Enterprises</div>
+      <div class="ind reveal"><span class="in-no">SECTOR 01</span>Contact Centers &amp; BPOs</div>
+      <div class="ind reveal" style="--d:.04s"><span class="in-no">SECTOR 02</span>Banking &amp; Branch Ops</div>
+      <div class="ind reveal" style="--d:.08s"><span class="in-no">SECTOR 03</span>Insurance &amp; Claims</div>
+      <div class="ind reveal" style="--d:.12s"><span class="in-no">SECTOR 04</span>Hospitals &amp; Healthcare Ops</div>
+      <div class="ind reveal"><span class="in-no">SECTOR 05</span>Retail &amp; Multi-store Ops</div>
+      <div class="ind reveal" style="--d:.04s"><span class="in-no">SECTOR 06</span>Manufacturing &amp; Quality</div>
+      <div class="ind reveal" style="--d:.08s"><span class="in-no">SECTOR 07</span>Field Service &amp; Logistics</div>
+      <div class="ind reveal" style="--d:.12s"><span class="in-no">SECTOR 08</span>Regulated Operations</div>
     </div>
-    <p class="trust-note reveal">Built for teams that need accurate, up-to-date, role-specific training across complex workflows.</p>
+    <p class="trust-note reveal">For Operations, Process Excellence and Compliance teams running large frontline workforces across multiple sites, shifts and regions.</p>
 
     <div class="compliance-row reveal">
       <div class="cbadge">
@@ -1300,13 +1544,13 @@ footer{background:var(--dark);color:var(--mute);
 <section class="final" id="final">
   <div class="wrap">
     <span class="kicker center">Get started</span>
-    <h2>Give your teams the training they <em>actually need</em>.</h2>
-    <p>Turn your internal documents into personalized learning, real-world practice scenarios, and a clear view of where teams could use more support — in minutes.</p>
+    <h2>Close the gap between your SOPs, your <em>floor</em>, and your audit binder.</h2>
+    <p>Drop in a real SOP and see what a same-week rollout looks like — whiteboard briefing, decision drill, adherence view, audit-evidence record. All from the document your policy team just signed off.</p>
     <div class="final-actions">
       <a href="https://cal.com/simpled/30min" target="_blank" rel="noopener" class="btn btn-light">Book a Demo <span class="arr">→</span></a>
-      <a href="#" class="btn btn-outline-light">Upload a sample document</a>
+      <a href="#" class="btn btn-outline-light">Upload a sample SOP</a>
     </div>
-    <p class="final-micro">Drop in one SOP — see a generated module &amp; a realistic practice scenario in return.</p>
+    <p class="final-micro">Drop in one SOP — get a generated briefing, a decision drill, and a sample audit-evidence record in return.</p>
   </div>
 </section>
 
@@ -1315,8 +1559,8 @@ footer{background:var(--dark);color:var(--mute);
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="brand" href="#top"><span class="mark"></span>Simpled <small>capability intel</small></a>
-        <p>The capability intelligence layer for enterprise learning. Generate, personalize and measure training from the knowledge your company already has.</p>
+        <a class="brand" href="#top"><span class="mark"></span>Simpled <small>process readiness</small></a>
+        <p>The process-readiness layer for Operations. Turn your latest SOPs into role-specific briefings, decision drills and adherence evidence — the day they ship.</p>
         <a class="foot-mail" href="mailto:manav@getsimpled.com">manav@getsimpled.com</a>
         <p class="foot-addr">650 California St,<br>San Francisco, CA 94108, USA</p>
       </div>
